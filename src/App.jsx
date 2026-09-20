@@ -38,6 +38,7 @@ function App() {
         <nav className="nav-links" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#members">Members</a>
+          <a href="#founders">Founders</a>
           <a href="#tournaments">Tournaments</a>
           <a href="#join">Join</a>
         </nav>
@@ -91,6 +92,51 @@ function App() {
                   </a>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="founders" className="section founders-section">
+          <div className="section-inner">
+            <p className="section-label">Our Beginning</p>
+            <h2>The Founders</h2>
+
+            <p className="founders-description">
+              The Boston Bishops was founded by Shaan, Aryan, and Ranveer with
+              one simple idea: chess should be something everyone has the
+              opportunity to enjoy, learn, and grow through. We wanted to build
+              more than just a group of people who play games against each other.
+              We wanted to create a foundation for better chess for everyone — a
+              place where players can challenge themselves, learn from one
+              another, meet new people, and become stronger both on and off the
+              board.
+            </p>
+
+            <p className="founders-description">
+              Whether someone is playing their first game or has been studying
+              chess for years, the goal of the Boston Bishops is to make the game
+              feel welcoming and exciting. We hope to build a community where
+              competition and friendship can exist side by side, and where every
+              member can contribute something to the club. The Boston Bishops
+              started with three founders, but its future belongs to everyone who
+              joins the board.
+            </p>
+
+            <div className="founders-grid">
+              <div className="founder-card">
+                <h3>Shaan</h3>
+                <p>Founder</p>
+              </div>
+
+              <div className="founder-card">
+                <h3>Aryan</h3>
+                <p>Founder</p>
+              </div>
+
+              <div className="founder-card">
+                <h3>Ranveer</h3>
+                <p>Founder</p>
+              </div>
             </div>
           </div>
         </section>
