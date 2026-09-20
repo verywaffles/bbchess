@@ -1,5 +1,32 @@
 import "./App.css";
 
+const members = [
+  {
+    name: "Shaan",
+    username: "@very_waffles",
+    url: "https://lichess.org/@/very_waffles",
+    label: "Shaan on Lichess",
+  },
+  {
+    name: "Aryan",
+    username: "@Supertable418",
+    url: "https://lichess.org/@/Supertable418",
+    label: "Aryan on Lichess",
+  },
+  {
+    name: "Ranveer",
+    username: "@ranveer2913",
+    url: "https://www.chess.com/member/ranveer2913",
+    label: "Ranveer on Chess.com",
+  },
+  {
+    name: "Salih",
+    username: "@XEntityx404",
+    url: "https://lichess.org/@/XEntityx404",
+    label: "Salih on Lichess",
+  },
+];
+
 function App() {
   return (
     <div className="site">
@@ -8,7 +35,7 @@ function App() {
           Boston Bishops
         </a>
 
-        <nav className="nav-links">
+        <nav className="nav-links" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#members">Members</a>
           <a href="#tournaments">Tournaments</a>
@@ -27,8 +54,8 @@ function App() {
               <p className="hero-description">
                 The Boston Bishops is a student chess club built around
                 competition, community, and a shared love of the game. Whether
-                you're here to sharpen your skills, challenge new opponents,
-                or simply enjoy a game of chess, there's a place for you on
+                you&apos;re here to sharpen your skills, challenge new opponents,
+                or simply enjoy a game of chess, there&apos;s a place for you on
                 the board.
               </p>
 
@@ -47,8 +74,23 @@ function App() {
               Meet the players who make up the Boston Bishops.
             </p>
 
-            <div className="members-placeholder">
-              <p>Members will be added here.</p>
+            <div className="members-list">
+              {members.map(({ name, username, url, label }) => (
+                <div className="member" key={name}>
+                  <div className="member-name">{name}</div>
+
+                  <a
+                    className="member-platform"
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                  >
+                    <span className="lichess-icon">♞</span>
+                    <span>{username}</span>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </section>

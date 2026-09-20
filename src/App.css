@@ -228,6 +228,62 @@ body {
   line-height: 1.6;
 }
 
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  padding: 28px 24px;
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+  box-shadow: 0 10px 30px rgba(17, 17, 17, 0.04);
+}
+
+.member-name {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.member-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.member-platform:hover {
+  color: #000000;
+}
+
+.lichess-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+  background: #111111;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .members-placeholder,
 .tournaments-placeholder {
   display: flex;
